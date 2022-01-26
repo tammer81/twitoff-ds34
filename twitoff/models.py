@@ -23,7 +23,7 @@ class Tweet(DB.Model):
     text = DB.Column(DB.Unicode(300), nullable=False)
     # User column schema (secondary/foreign key)
     user_id = DB.Column(DB.BigInteger, DB.ForeignKey(
-        'user.id'), nullable=False)
+                        'user.id'), nullable=False)
     # Establish relationship between tweets and users
     # Will automatically create one-to-many relationship
     # Will also add new attribute to User class "tweets"
